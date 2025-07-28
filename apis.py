@@ -42,7 +42,7 @@ logging.basicConfig(
 log = logging.getLogger("notion‑mcp‑api")
 
 # ─────────────────────────── ENV vars ───────────────────────────
-load_dotenv()  # Optional: remove if you inject vars at runtime
+load_dotenv() 
 OPENAI_API_KEY   = os.getenv("OPEN_API_KEY")
 NOTION_MCP_TOKEN = os.getenv("NOTION_MCP_TOKEN")
 NOTION_VERSION   = os.getenv("NOTION_VERSION", "2022-06-28")
