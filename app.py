@@ -10,11 +10,12 @@ from langgraph.graph import StateGraph, START, END
 from langgraph.graph import MessagesState
 from langgraph.prebuilt import ToolNode
 from langgraph.checkpoint.memory import MemorySaver
-
+from dotenv import load_dotenv
 # ─────────── Hard‑coded secrets (DEV ONLY – remove before publishing) ──────────
+load_dotenv()
 OPENAI_API_KEY   = os.getenv('OPEN_API_KEY')
 NOTION_MCP_TOKEN = os.getenv('NOTION_MCP_TOKEN')
-NOTION_VERSION   = os.getend('NOTION_VERSION')
+NOTION_VERSION   = os.getenv('NOTION_VERSION')
 
 # ───────────────────────── build LangGraph app once ───────────────────────────
 async def build_app():
